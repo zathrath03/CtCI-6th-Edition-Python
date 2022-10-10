@@ -89,7 +89,7 @@ class Test(unittest.TestCase):
     ]
 
     def test_is_unique_chars(self):
-        num_runs = 1000000
+        num_runs = 1000
         function_runtimes = defaultdict(float)
 
         for _ in range(num_runs):
