@@ -3,7 +3,7 @@ import unittest
 from collections import defaultdict
 
 
-def is_unique_chars_algorithmic(string):
+def is_unique_chars_algorithmic(string: str) -> bool:
     # Assuming character set is ASCII (128 characters)
     if len(string) > 128:
         return False
@@ -21,11 +21,11 @@ def is_unique_chars_algorithmic(string):
     return True
 
 
-def is_unique_chars_pythonic(string):
+def is_unique_chars_pythonic(string: str) -> bool:
     return len(set(string)) == len(string)
 
 
-def is_unique_bit_vector(string):
+def is_unique_bit_vector(string: str) -> bool:
     """Uses bitwise operation instead of extra data structures."""
     # Assuming character set is ASCII (128 characters)
     if len(string) > 128:
@@ -89,7 +89,7 @@ class Test(unittest.TestCase):
     ]
 
     def test_is_unique_chars(self):
-        num_runs = 1000
+        num_runs = 1000000
         function_runtimes = defaultdict(float)
 
         for _ in range(num_runs):
